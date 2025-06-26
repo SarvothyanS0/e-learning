@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Page</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <a href="/">← Back</a>
+  <h1 id="course-title">Course Title</h1>
+  <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+  
+  <h3>Progress: <span id="progress-value">0%</span></h3>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+  <button onclick="increaseProgress()">Mark Progress +10%</button>
+
+  <script src="/static/js/script.js"></script>
+  <script>
+    const courseId = "{{ course_id }}";
+    loadCourse(courseId);
+  </script>
+</body>
+</html>
